@@ -4,70 +4,67 @@ public class Main
 {
     public static void main(String args[]) throws IOException {
 
-        BufferedReader br = new BufferedReader(new FileReader("day01_test2.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("day01_data.txt"));
         int calValues = 0;
 
         //végig a sorokon
         String line;
         String[] numbersText = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-        String[] numbersNum = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+        String[] numbersNum =  {"1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
+        //végig az input sorain. egy sor adata = line
         while ((line = br.readLine()) != null) {
-//            System.out.println("input line: " + line);
+            System.out.println("input line: " + line);
+
             String currentLine = "";
-            for (int c = 0; c < line.length(); c++) {
-                currentLine = currentLine + line.charAt(c);
-//                System.out.println(currentLine);
-                for (int i = 0; i < numbersText.length; i++) {
-                    if (currentLine.contains(numbersText[i])) {
-                        System.out.println("csere1! " + currentLine);
-                        currentLine = currentLine.replace(numbersText[i], numbersNum[i]);
-                        break;
-                    }
-                }
-//                System.out.println(val);
-            }
-            line = currentLine;
-
-            currentLine = "";
-            for (int c = line.length()-1; c >= 0; c--) {
-                currentLine = line.charAt(c) + currentLine;
-//                System.out.println(currentLine);
-                for (int i = 0; i < numbersText.length; i++) {
-                    if (currentLine.contains(numbersText[i])) {
-                        System.out.println("csere2! " + currentLine);
-                        currentLine = currentLine.replace(numbersText[i], numbersNum[i]);
-                        break;
-                    }
-                }
-//                System.out.println(val);
-            }
-            line = currentLine;
-
-
-
             //végig egy-egy sor karakterein
             int currentNum = 0; //az adott sorban található szám lesz
-            System.out.println("output line: " + line);
-            //elejéről indulva
-            for (int c = 0; c < line.length(); c++) {
-                int num = ((int) line.charAt(c)) -48;
+            int charLen = 0; //aktuális betűsorozat (amit nem szakítanak meg számok)
 
-                if (num < 10) {;
-//                    System.out.print(num);
-                    currentNum += num*10;
+            //végig az aktuális sor karakterein balról jobbra
+            for (int c = 0; c < line.length(); c++) {
+                if (isNumber(line.charAt(c))) {             // ha szám
+                    System.out.println("szám-bal! " + line.charAt(c));
+                    currentNum += ((int) line.charAt(c) -48) * 10;
                     break;
+                } else {                                    // ha betű
+                    currentLine = currentLine + line.charAt(c);
+//                  System.out.println(currentLine);
+                    boolean foundNumText = false;
+                    for (int i = 0; i < numbersText.length; i++) {
+                        if (currentLine.contains(numbersText[i])) {
+                            int a = Integer.parseInt(numbersNum[i]);
+                            System.out.println("char-bal: " + a);
+                            currentNum += a * 10;
+                            foundNumText = true;
+                            break;
+                        }
+                    }
+                    if (foundNumText) break;
                 }
             }
 
-            //végéről indulva
+            currentLine = "";
+            //végig az akt. sor karakterein jobbról balra
             for (int c = line.length()-1; c >= 0; c--) {
-                int num = ((int) line.charAt(c)) -48;
-
-                if (num < 10) {;
-//                    System.out.print(num);
-                    currentNum += num;
+                if (isNumber(line.charAt(c))) {             // ha szám
+                    System.out.println("szám-jobb! " + line.charAt(c));
+                    currentNum += ((int) line.charAt(c) - 48);
                     break;
+                } else {                                    // ha betű
+                    currentLine = line.charAt(c) + currentLine;
+//                  System.out.println(currentLine);
+                    boolean foundNumText = false;
+                    for (int i = 0; i < numbersText.length; i++) {
+                        if (currentLine.contains(numbersText[i])) {
+                            int a = Integer.parseInt(numbersNum[i]);
+                            System.out.println("char-jobb: " + a);
+                            currentNum += a;
+                            foundNumText = true;
+                            break;
+                        }
+                    }
+                    if (foundNumText) break;
                 }
             }
 
@@ -80,16 +77,16 @@ public class Main
         System.out.println("Calibration Value = " + calValues);
 
 
+// 55902 ??? na? IGEN!!
 
 
-// rossz:
-// 55929
+    }
 
-
-
-
-
-
-
+    public static boolean isNumber(char c) {
+        boolean isnum = false;
+        if ((c - 48) < 10) {
+            isnum = true;
+        }
+        return isnum;
     }
 }  
