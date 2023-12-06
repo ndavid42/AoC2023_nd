@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46e5bdce-9e22-49c4-9215-822354d0cb97" name="Changes" comment="day 2 nekiállva&#10;(plusz 3-4 nap előkészítve)">
-      <change afterPath="$PROJECT_DIR$/src/day02part2.java" afterDir="false" />
+    <list default="true" id="46e5bdce-9e22-49c4-9215-822354d0cb97" name="Changes" comment="day2 part1&amp;2 done!">
+      <change afterPath="$PROJECT_DIR$/hasznos.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day07.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input03/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input03/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input03/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input03/test1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input03/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input03/test2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input04/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input04/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input04/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input04/test1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day04.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,13 +102,29 @@
       <option name="project" value="LOCAL" />
       <updated>1701546912399</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="day2 part1&amp;2 done!">
+      <option name="closed" value="true" />
+      <created>1701630353296</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701630353296</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="day 1 part 2 siker!" />
     <MESSAGE value="day 2 nekiállva&#10;(plusz 3-4 nap előkészítve)" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 2 nekiállva&#10;(plusz 3-4 nap előkészítve)" />
+    <MESSAGE value="day2 part1&amp;2 done!" />
+    <option name="LAST_COMMIT_MESSAGE" value="day2 part1&amp;2 done!" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.io.BufferedReader" memberName="cb" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
